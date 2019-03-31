@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 use File::Find::Rule;
+use JSON;
 use lib 'lib';
 use Perl5::Analyzer;
-use JSON;
 
 use Data::Dumper;
 
