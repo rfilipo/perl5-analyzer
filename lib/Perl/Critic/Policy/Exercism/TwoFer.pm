@@ -9,7 +9,7 @@ use base 'Perl::Critic::Policy';
  
 our $VERSION = '0.01';
 
-Readonly::Scalar my $DESC          => q{Analyzing the exercise "TwoFer"};
+Readonly::Scalar my $DESC          => q{OPTIMAL: exercise "TwoFer"};
 Readonly::Scalar my $EXPL          => undef;
 Readonly::Scalar my $SEVERITY_HIGH => 5;
 

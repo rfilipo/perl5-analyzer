@@ -15,16 +15,22 @@ sub new {
 }
 
 sub test {
-    return 1;
+    my $self = shift;
+    $self->{test_file} = shift;
+    my $cmd = "prove -v ".$self->{test_file};    
+    my @output = `$cmd`;    
+    chomp @output;
+    #print Dumper @output;
+    return @output;
 }
 
 sub analyze {
     my $self = shift;
     $self->{file} = shift;
     $self->{document} = read_file($self->{file});
-    print Dumper $self;
     my $critic = Perl::Critic->new();
     my @violations = $critic->critique(\$self->{document});
+    #print Dumper @violations;
     return @violations;
 }
 
