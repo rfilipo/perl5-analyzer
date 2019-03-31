@@ -11,7 +11,7 @@ use Data::Dumper;
 
 my $slug     = shift;
 my $path     = shift;
-my $dir      = $path . "fixtures/" . $slug;
+my $dir      = $path . $slug;
 my $analyzer = Perl5::Analyzer->new;
 
 my @modules = File::Find::Rule->file()->name('*.pm')->in($dir);
